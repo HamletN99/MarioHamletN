@@ -6,12 +6,12 @@ game.PlayScreen = me.ScreenObject.extend({
 		// reset the score
 		game.data.score = 0;
 
+                me.levelDirector.loadLevel("HamletLevel01");
+
 		// add our HUD to the game world
 		this.HUD = new game.HUD.Container();
 		me.game.world.addChild(this.HUD);
 	},
-
-
 	/**
 	 *  action to perform when leaving this screen (state change)
 	 */
