@@ -5,9 +5,11 @@ game.resources = [
 	 * {name: "example", type:"image", src: "data/img/example.png"},
 	 */
 
-         {name: "background-tile", type:"image", src: "data/img/background-tiles.png"},
+         {name: "background-tiles", type:"image", src: "data/img/background-tiles.png"},
+         {name: "meta-tiles", type:"image", src: "data/img/meta-tiles.png"},
+         {name: "mario", type:"image", src: "data/img/player1.png"},
 
-	/* Atlases 
+	/* Atlases
 	 * @example
 	 * {name: "example_tps", type: "tps", src: "data/img/example_tps.json"},
 	 */
@@ -19,6 +21,7 @@ game.resources = [
  	 */
 
           {name: "HamletLevel01", type: "tmx", src: "data/map/HamletLevel01.tmx"},
+          {name: "HamletLevel02", type: "tmx", src: "data/map/HamletLevel02.tmx"},
 
 	/* Background music. 
 	 * @example
