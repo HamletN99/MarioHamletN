@@ -23,10 +23,12 @@ game.PlayerEntity = me.Entity.extend({
     
     
     update : function (delta){
-        if(me.input.isKeyPressed("right")){
+         if (me.input.isKeyPressed('left')) {
+            this.flipX(true)};
+          if(me.input.isKeyPressed("right")){
             this.body.vel.x += this.body.accel.x * me.timer.tick;
             //this.renderable.setCurrentAnimation("smallWalk");
-        }else{
+        } else{
             this.body.vel.x = 0;
         }
         
@@ -61,7 +63,7 @@ game.LevelTrigger = me.Entity.extend({
     },
     
     onCollision: function(){
-        this.body.setCollisionMask(me.collision.type.NO_OBJECT);
+        this.body.setCollisionMask(me.collision.types.NO_OBJECT);
         me.levelDirector.loadLevel(this.level);
         me.state.current().resetPlayer();
     }

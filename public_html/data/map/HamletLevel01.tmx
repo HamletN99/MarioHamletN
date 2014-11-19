@@ -28,7 +28,7 @@
   </data>
  </layer>
  <objectgroup name="trigger-entities">
-  <object name="levelTrigger" x="1050.67" y="418.667" width="69.3333" height="141.333">
+  <object name="levelTrigger" x="840.67" y="417.667" width="69.3333" height="141.333">
    <properties>
     <property name="level" value="HamletLevel02"/>
    </properties>
