@@ -25,11 +25,16 @@ game.PlayerEntity = me.Entity.extend({
     update : function (delta){
          if (me.input.isKeyPressed('left')) {
             this.flipX(true)};
+             this.body.vel.y;
           if(me.input.isKeyPressed("right")){
             this.body.vel.x += this.body.accel.x * me.timer.tick;
             //this.renderable.setCurrentAnimation("smallWalk");
         } else{
             this.body.vel.x = 0;
+        }
+        if(me.input.isKeyPressed("jump")){
+            this.body.vel.y = -this.body.maxVel.y * me.timer.tick;
+            this.body.jumping = true;
         }
         
        this.body.update(delta);
