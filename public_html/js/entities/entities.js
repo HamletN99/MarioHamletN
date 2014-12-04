@@ -24,18 +24,22 @@ game.PlayerEntity = me.Entity.extend({
     
     update : function (delta){
          if (me.input.isKeyPressed('left')) {
-            this.flipX(true)};
-             this.body.vel.y;
-          if(me.input.isKeyPressed("right")){
+            this.flipX(true);
+        this.body.vel.x -= this.body.accel.x * me.timer.tick;
+    } 
+          else if(me.input.isKeyPressed("right")){
             this.body.vel.x += this.body.accel.x * me.timer.tick;
-            //this.renderable.setCurrentAnimation("smallWalk");
+             this.flipX(false);
         } else{
             this.body.vel.x = 0;
         }
         if(me.input.isKeyPressed("jump")){
-            this.body.vel.y = -this.body.maxVel.y * me.timer.tick;
-            this.body.jumping = true;
+         if (!this.body.jumping && !this.body.falling) {
+                this.body.vel.y = -this.body.maxVel.y * me.timer.tick;
+                this.body.jumping = true;
+            }   
         }
+        
         
        this.body.update(delta);
        me.collision.check(this, true, this.collideHandler.bind(this), true);
