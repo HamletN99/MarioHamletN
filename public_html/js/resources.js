@@ -10,8 +10,8 @@ game.resources = [
          {name: "mario", type:"image", src: "data/img/player1.png"},
          {name: "title-screen", type:"image", src: "data/img/title-screen.png"},
          {name: "slime", type:"image", src: "data/img/slime-spritesheet.png"},
-         {name: "HamletLevel02", type:"image", src: "data/img/marioss.png"},
-         
+         {name: "newimage2", type:"image", src: "data/img/newimage2.png"},
+
 
 	/* Atlases
 	 * @example
@@ -25,7 +25,7 @@ game.resources = [
  	 */
 
           {name: "HamletLevel01", type: "tmx", src: "data/map/HamletLevel01.tmx"},
-          {name: "HamletLevel02", type: "tmx", src: "data/map/HamletLevel02.tmx"},
+          {name: "HamletLevel02", type: "tmx", src: "data/map/HamletLevel02.tmx"}
 
 	/* Background music. 
 	 * @example
