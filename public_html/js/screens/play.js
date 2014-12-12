@@ -5,11 +5,11 @@ game.PlayScreen = me.ScreenObject.extend({
 	onResetEvent: function() {
 		// reset the score
 		game.data.score = 0;
-
+//Resets the game onto the level that it is setted too.
                 me.levelDirector.loadLevel("HamletLevel01");
                 
                 this.resetPlayer(0, 400);
-                
+//These are codes for making the person be able to press right, up, and left during the game.                
                 me.input.bindKey(me.input.KEY.RIGHT, "right");
                 me.input.bindKey(me.input.KEY.UP, "jump");
                 me.input.bindKey(me.input.KEY.LEFT, "left");
@@ -27,9 +27,9 @@ game.PlayScreen = me.ScreenObject.extend({
 		// remove the HUD from the game world
 		me.game.world.removeChild(this.HUD);
 	},
-        
+        //Resets the player in the game when starting or restarting the game.
         resetPlayer:function(){
             var player = me.pool.pull("mario", 0, 400, {});
-            me.game.world.addChild(player, 7);
+            me.game.world.addChild(player, 21);
         }
 });
