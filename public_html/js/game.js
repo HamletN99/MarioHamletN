@@ -39,11 +39,17 @@ var game = {
 
 	// Run on game resources loaded.
 	"loaded" : function () {
+            //registers mario in the player entities code.
                 me.pool.register("mario", game.PlayerEntity, true);
+            //registers the bad in the game to go and stay in a certain area.
                 me.pool.register("BadGuy", game.BadGuy);
-                
+            //registers the mushroom so the player could eat it and grow.
+                me.pool.register("mushroom", game.Mushroom);
+            //registers the levels trigger in the game to make it run the levels.    
                 me.pool.register("levelTrigger", game.LevelTrigger);
             
+                //*me.state.set(me.state.MENU, new game.GameOverScreen());
+                //makes different menus for the title screen and then the actual play screen.
 		me.state.set(me.state.MENU, new game.TitleScreen());
 		me.state.set(me.state.PLAY, new game.PlayScreen());
 
